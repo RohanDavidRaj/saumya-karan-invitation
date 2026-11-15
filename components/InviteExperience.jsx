@@ -8,7 +8,7 @@ import SplashScreen from "./SplashScreen";
 import Venue from "./Venue";
 import BackgroundMusic from "./BackgroundMusic";
 
-export default function InviteExperience({ nameFirst, nameSecond, phoneDisplay, phoneHref }) {
+export default function InviteExperience({ nameFirst, nameSecond }) {
   const [hasEntered, setHasEntered] = useState(false);
   const musicRef = useRef(null);
   const venueRef = useRef(null);
@@ -47,8 +47,6 @@ export default function InviteExperience({ nameFirst, nameSecond, phoneDisplay, 
         isVisible={hasEntered}
         nameFirst={nameFirst}
         nameSecond={nameSecond}
-        phoneDisplay={phoneDisplay}
-        phoneHref={phoneHref}
       />
       <Countdown />
       <div ref={venueRef}>

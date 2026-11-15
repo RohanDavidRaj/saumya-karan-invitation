@@ -2,20 +2,18 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
-  metadataBase: new URL("https://komal-suyash-invitation.vercel.app"),
-  title: "Komal & Suyash — Engagement Invitation",
-  description: "Together with their families, delighted to announce their engagement. Friday, 14 August 2026, 11:00 AM onwards at Chhappan Bhog, Chhatrapati Sambhaji Nagar.",
+  title: "Saumya & Karan — Engagement Invitation",
+  description: "Together with their families, Saumya and Karan invite you to celebrate their engagement on Saturday, 21 November 2026 at Manasi Hotel, Chhatrapati Sambhajinagar, Aurangabad, Maharashtra.",
   openGraph: {
-    title: "Komal & Suyash — Engagement Invitation",
-    description: "You're invited! Friday, 14 August 2026, 11:00 AM onwards at Chhappan Bhog, Chhatrapati Sambhaji Nagar.",
-    url: "https://komal-suyash-invitation.vercel.app",
-    siteName: "Komal & Suyash Engagement",
+    title: "Saumya & Karan — Engagement Invitation",
+    description: "You're invited! Saturday, 21 November 2026 at Manasi Hotel, Chhatrapati Sambhajinagar, Aurangabad, Maharashtra.",
+    siteName: "Saumya & Karan Engagement",
     images: [
       {
-        url: "/invitation-assets/og-preview.png", // your 1200x630 image
+        url: "/invitation-assets/og-preview.svg",
         width: 1200,
         height: 630,
-        alt: "Komal & Suyash Engagement Invitation"
+        alt: "Saumya & Karan Engagement Invitation"
       }
     ],
     locale: "en_IN",
@@ -24,9 +22,9 @@ export const metadata = {
   // This specifically controls the WhatsApp/iMessage/Twitter-style card
   twitter: {
     card: "summary_large_image",
-    title: "Komal & Suyash — Engagement Invitation",
-    description: "You're invited! Friday, 14 August 2026, 11:00 AM onwards.",
-    images: ["/invitation-assets/og-preview.png"]
+    title: "Saumya & Karan — Engagement Invitation",
+    description: "You're invited! Saturday, 21 November 2026 at Manasi Hotel.",
+    images: ["/invitation-assets/og-preview.svg"]
   }
 };
 

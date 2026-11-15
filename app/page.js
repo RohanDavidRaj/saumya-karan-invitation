@@ -54,29 +54,27 @@
 import InviteExperience from "../components/InviteExperience";
 
 export const metadata = {
-  title: "Komal & Suyash — Engagement Invitation",
-  description: "Together with their families, delighted to announce their engagement. Friday, 14 August 2026, 11:00 AM onwards at Chhappan Bhog, Chhatrapati Sambhaji Nagar.",
+  title: "Saumya & Karan — Engagement Invitation",
+  description: "Together with their families, Saumya and Karan invite you to celebrate their engagement on Saturday, 21 November 2026 at Manasi Hotel, Chhatrapati Sambhajinagar, Aurangabad, Maharashtra.",
   openGraph: {
-    title: "Komal & Suyash — Engagement Invitation",
-    description: "You're invited! Friday, 14 August 2026, 11:00 AM onwards at Chhappan Bhog, Chhatrapati Sambhaji Nagar.",
-    images: [{ url: "/invitation-assets/og-preview.png", width: 1200, height: 630, alt: "Komal & Suyash Engagement Invitation" }],
+    title: "Saumya & Karan — Engagement Invitation",
+    description: "You're invited! Saturday, 21 November 2026 at Manasi Hotel, Chhatrapati Sambhajinagar, Aurangabad, Maharashtra.",
+    images: [{ url: "/invitation-assets/og-preview.svg", width: 1200, height: 630, alt: "Saumya & Karan Engagement Invitation" }],
     locale: "en_IN",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Komal & Suyash — Engagement Invitation",
-    images: ["/invitation-assets/og-preview.png"]
+    title: "Saumya & Karan — Engagement Invitation",
+    images: ["/invitation-assets/og-preview.svg"]
   }
 };
 
 export default function Home() {
   return (
     <InviteExperience
-      nameFirst="Komal"
-      nameSecond="Suyash"
-      phoneDisplay="7972529935 / 9403123453"
-      phoneHref="tel:7972529935"
+      nameFirst="Saumya"
+      nameSecond="Karan"
     />
   );
 }
