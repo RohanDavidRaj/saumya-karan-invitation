@@ -41,7 +41,13 @@ export default function Hero({
             animate={isVisible ? "show" : "hidden"}
             className="relative flex min-h-full flex-col justify-center border border-[#bb966e]/45 px-2 py-2 text-center sm:px-8 sm:py-7"
           >
-            <motion.div initial={{ opacity: 0, y: -110, scale: 0.8 }} animate={isVisible ? { opacity: 1, scale: 1, y: [0, -8, 0], rotate: [0, 1.5, 0] } : {}} transition={{ opacity: { duration: 0.6, delay: 0.2 }, scale: { duration: 0.7, delay: 0.2, type: "spring", stiffness: 120 }, y: { duration: 4, repeat: Infinity, ease: "easeInOut" }, rotate: { duration: 4, repeat: Infinity, ease: "easeInOut" } }} className="relative z-10 mx-auto mb-0 h-[clamp(2rem,7dvh,4rem)] w-[clamp(2rem,7dvh,4rem)] sm:h-32 sm:w-32">
+            <motion.div initial={{ opacity: 0, y: -110, scale: 0.8 }} animate={isVisible ? { opacity: 1, scale: 1, y: [0, -8, 0], rotate: [0, 0.4, 0] } : {}} transition={{ opacity: { duration: 0.6, delay: 0.2 }, scale: { duration: 0.7, delay: 0.2, type: "spring", stiffness: 120 }, y: { duration: 4, repeat: Infinity, ease: "easeInOut" }, rotate: { duration: 5, repeat: Infinity, ease: "easeInOut" } }} className="relative z-10 isolate mx-auto mb-0 h-[clamp(2rem,7dvh,4rem)] w-[clamp(2rem,7dvh,4rem)] sm:h-32 sm:w-32">
+              <motion.span
+                aria-hidden="true"
+                animate={isVisible ? { opacity: [0.18, 0.48, 0.18], scale: [0.88, 1.08, 0.88] } : { opacity: 0, scale: 0.8 }}
+                transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute inset-1 rounded-full bg-[#e8b759]/55 blur-lg"
+              />
               <Image src="/invitation-assets/Minimalist Maroon Ganesha with Amber Tilak.png" alt="Minimalist maroon illustration of Lord Ganesha with an amber tilak" fill priority unoptimized sizes="128px" className="object-contain drop-shadow-[0_12px_12px_rgba(134,72,72,.2)]" />
             </motion.div>
             <motion.p variants={detailReveal} className="text-[7px] font-bold uppercase tracking-[0.15em] text-[#725d4e] sm:text-[11px] sm:tracking-[0.25em]">Together with their families</motion.p>
@@ -56,7 +62,7 @@ export default function Hero({
             <motion.p variants={detailReveal} className="mt-1 text-[9px] leading-4 text-ink/80 sm:mt-5 sm:text-xs sm:leading-6">Your presence will make this occasion even more special.</motion.p>
             <motion.p variants={detailReveal} className="mt-1 text-[8px] font-bold uppercase tracking-[0.18em] text-[#a57548] sm:mt-4 sm:text-[11px]">Venue</motion.p>
             <motion.p variants={detailReveal} className="mt-0.5 font-display text-[13px] leading-4 text-[#8f3b55] sm:mt-1 sm:text-xl sm:leading-7">Manasi Hotel<br />Chhatrapati Sambhajinagar, Aurangabad</motion.p>
-            <motion.div initial={{ opacity: 0, y: 100, scale: 0.86 }} animate={isVisible ? { opacity: 1, scale: 1, y: [0, -4, 0] } : {}} transition={{ opacity: { duration: 0.65, delay: 1 }, scale: { duration: 0.75, delay: 1, type: "spring", stiffness: 120 }, y: { duration: 3.8, repeat: Infinity, ease: "easeInOut" } }} className="relative z-10 mx-auto mt-3 h-[clamp(3rem,12dvh,7rem)] w-full max-w-[9rem] sm:mt-7 sm:max-w-xs">
+            <motion.div initial={{ opacity: 0, y: 100, scale: 0.86 }} animate={isVisible ? { opacity: 1, scale: 1, y: [0, -2, 0], rotate: [0, 0.8, -0.8, 0] } : {}} transition={{ opacity: { duration: 0.65, delay: 1 }, scale: { duration: 0.75, delay: 1, type: "spring", stiffness: 120 }, y: { duration: 4.5, repeat: Infinity, ease: "easeInOut" }, rotate: { duration: 5.5, repeat: Infinity, ease: "easeInOut" } }} style={{ transformOrigin: "bottom center" }} className="relative z-10 mx-auto mt-3 h-[clamp(3rem,12dvh,7rem)] w-full max-w-[9rem] sm:mt-7 sm:max-w-xs">
               <Image src="/invitation-assets/Elegant Wedding Couple Dancing.png" alt="Elegant illustration of a wedding couple dancing" fill unoptimized sizes="(max-width: 640px) 288px, 384px" className="object-contain object-bottom drop-shadow-[0_18px_15px_rgba(87,46,42,.18)]" />
             </motion.div>
             <motion.p variants={detailReveal} className="mt-0.5 text-[8px] text-ink/80 sm:mt-1 sm:text-xs">With best compliments from <span className="font-display text-xs text-[#8f3b55] sm:text-lg">Family</span></motion.p>
