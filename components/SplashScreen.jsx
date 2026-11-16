@@ -2,8 +2,19 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 
 export default function SplashScreen({ onEnter, nameFirst = "Saumya", nameSecond = "Karan" }) {
+  const [isOpening, setIsOpening] = useState(false);
+  const openingStarted = useRef(false);
+
+  const handleOpen = () => {
+    if (openingStarted.current) return;
+    openingStarted.current = true;
+    setIsOpening(true);
+    window.setTimeout(onEnter, 650);
+  };
+
   return (
     <motion.div
       className="fixed inset-0 z-50 grid place-items-center overflow-hidden bg-[#fff5df] px-4 py-5 text-center"
@@ -21,9 +32,26 @@ export default function SplashScreen({ onEnter, nameFirst = "Saumya", nameSecond
       />
       <div className="absolute inset-0 bg-gradient-to-b from-[#eed7ae]/30 via-[#fff3dc]/25 to-[#754b36]/25" />
 
+      {isOpening && (
+        <>
+          <motion.div
+            initial={{ x: 0 }}
+            animate={{ x: "-100%" }}
+            transition={{ duration: 0.7, ease: [0.7, 0, 0.3, 1] }}
+            className="pointer-events-none absolute inset-y-0 left-0 z-30 w-1/2 border-r border-[#e8c77b]/75 bg-gradient-to-r from-[#4b202c]/95 to-[#76503e]/95 shadow-[12px_0_36px_rgba(48,25,35,.3)]"
+          />
+          <motion.div
+            initial={{ x: 0 }}
+            animate={{ x: "100%" }}
+            transition={{ duration: 0.7, ease: [0.7, 0, 0.3, 1] }}
+            className="pointer-events-none absolute inset-y-0 right-0 z-30 w-1/2 border-l border-[#e8c77b]/75 bg-gradient-to-l from-[#4b202c]/95 to-[#76503e]/95 shadow-[-12px_0_36px_rgba(48,25,35,.3)]"
+          />
+        </>
+      )}
+
       <motion.article
         initial={{ opacity: 0, y: 20, scale: 0.98 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
+        animate={isOpening ? { opacity: 0, y: -8, scale: 0.97 } : { opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
         className="relative w-full max-w-lg rounded-[2rem] border border-[#b98a5a]/75 bg-gradient-to-br from-[#fff4df]/90 via-[#f4e4c8]/88 to-[#ead4ae]/90 p-2 shadow-[0_28px_90px_rgba(73,45,30,.32)] backdrop-blur-md sm:rounded-[2.5rem] sm:p-3"
       >
@@ -71,7 +99,8 @@ export default function SplashScreen({ onEnter, nameFirst = "Saumya", nameSecond
             />
             <motion.button
               type="button"
-              onClick={onEnter}
+              onClick={handleOpen}
+              disabled={isOpening}
               whileHover={{ scale: 1.08, y: -2, boxShadow: "0 14px 34px rgba(143,59,85,.4)" }}
               whileTap={{ scale: 0.94 }}
               className="relative flex items-center gap-3 rounded-full border border-[#8f3b55] bg-[#8f3b55] px-8 py-3.5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#fff8ec] shadow-[0_8px_24px_rgba(86,45,50,.28)] transition-colors hover:bg-[#723343] focus:outline-none focus:ring-2 focus:ring-[#b98a5a] focus:ring-offset-4 focus:ring-offset-[#f4e4c8] sm:px-10 sm:text-xs"

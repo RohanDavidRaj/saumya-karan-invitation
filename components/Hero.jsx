@@ -27,7 +27,12 @@ export default function Hero({
         transition={{ duration: 0.85, delay: 0.25 }}
         className="relative mx-auto flex h-full max-w-2xl items-center justify-center sm:h-auto"
       >
-        <article className="relative aspect-[2/3] w-full overflow-hidden rounded-[1.6rem] border border-[#b98a5a]/30 bg-[#fff9e9] p-1.5 shadow-[0_24px_70px_rgba(97,55,43,.22)] sm:rounded-[2.2rem] sm:p-3">
+        <motion.article
+          initial={{ clipPath: "inset(0 50% 0 50% round 32px)", opacity: 0 }}
+          animate={isVisible ? { clipPath: "inset(0 0% 0 0% round 32px)", opacity: 1 } : { clipPath: "inset(0 50% 0 50% round 32px)", opacity: 0 }}
+          transition={{ duration: 1.05, delay: 0.12, ease: [0.65, 0, 0.35, 1] }}
+          className="relative aspect-[2/3] w-full overflow-hidden rounded-[1.6rem] border border-[#b98a5a]/30 bg-[#fff9e9] p-1.5 shadow-[0_24px_70px_rgba(97,55,43,.22)] sm:rounded-[2.2rem] sm:p-3"
+        >
           <Image src="/invitation-assets/Ornate Indian Palace Garden Archway.jpeg" alt="Ornate Indian palace garden archway invitation background" fill priority unoptimized sizes="(max-width: 768px) 100vw, 672px" className="object-fill opacity-90" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#fff9e9]/5 via-[#fff9e9]/10 to-[#fff9e9]/5" />
           <motion.div
@@ -56,7 +61,7 @@ export default function Hero({
             </motion.div>
             <motion.p variants={detailReveal} className="mt-0.5 text-[8px] text-ink/80 sm:mt-1 sm:text-xs">With best compliments from <span className="font-display text-xs text-[#8f3b55] sm:text-lg">Family</span></motion.p>
           </motion.div>
-        </article>
+        </motion.article>
       </motion.div>
     </section>
   );
