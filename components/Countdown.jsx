@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const celebrationDate = new Date("2026-11-21T00:00:00+05:30").getTime();
+const celebrationDate = new Date("2026-11-21T18:00:00+05:30").getTime();
 
 function getTimeLeft() {
   const difference = celebrationDate - Date.now();

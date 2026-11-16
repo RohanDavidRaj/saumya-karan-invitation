@@ -46,7 +46,7 @@ export default function Hero({
             <motion.div variants={detailReveal} className="grid grid-cols-3 items-center gap-1 text-ink sm:gap-3">
               <p className="text-[6px] font-bold uppercase tracking-wider sm:text-[11px]">Saturday</p>
               <p className="border-x border-[#b99161]/60 px-1 font-display text-[13px] leading-tight text-[#8f3b55] sm:px-2 sm:text-xl"><span className="block text-xl sm:text-5xl">21</span>November<br />2026</p>
-              <p className="text-[6px] font-bold uppercase leading-4 tracking-wider sm:text-[11px]">You are<br />invited</p>
+              <p className="text-[6px] font-bold uppercase leading-4 tracking-wider sm:text-[11px]">6:00 PM<br />Onwards</p>
             </motion.div>
             <motion.p variants={detailReveal} className="mt-1 text-[9px] leading-4 text-ink/80 sm:mt-5 sm:text-xs sm:leading-6">Your presence will make this occasion even more special.</motion.p>
             <motion.p variants={detailReveal} className="mt-1 text-[8px] font-bold uppercase tracking-[0.18em] text-[#a57548] sm:mt-4 sm:text-[11px]">Venue</motion.p>

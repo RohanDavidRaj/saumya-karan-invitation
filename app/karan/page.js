@@ -2,10 +2,10 @@ import InviteExperience from "../../components/InviteExperience";
 
 export const metadata = {
   title: "Karan & Saumya — Engagement Invitation",
-  description: "Together with their families, Karan and Saumya invite you to celebrate their engagement on Saturday, 21 November 2026 at Manasi Hotel, Chhatrapati Sambhajinagar, Aurangabad, Maharashtra.",
+  description: "Together with their families, Karan and Saumya invite you to celebrate their engagement on Saturday, 21 November 2026, 6:00 PM onwards at Manasi Hotel, Chhatrapati Sambhajinagar, Aurangabad, Maharashtra.",
   openGraph: {
     title: "Karan & Saumya — Engagement Invitation",
-    description: "You're invited! Saturday, 21 November 2026 at Manasi Hotel, Chhatrapati Sambhajinagar, Aurangabad, Maharashtra.",
+    description: "You're invited! Saturday, 21 November 2026, 6:00 PM onwards at Manasi Hotel, Chhatrapati Sambhajinagar, Aurangabad, Maharashtra.",
     images: [{ url: "/invitation-assets/og-preview-karan.png", width: 1200, height: 630, alt: "Karan & Saumya Engagement Invitation" }],
     locale: "en_IN",
     type: "website"

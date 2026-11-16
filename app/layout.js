@@ -7,10 +7,10 @@ const siteOrigin = process.env.NEXT_PUBLIC_SITE_URL || (deploymentHost ? `https:
 export const metadata = {
   metadataBase: new URL(siteOrigin),
   title: "Saumya & Karan — Engagement Invitation",
-  description: "Together with their families, Saumya and Karan invite you to celebrate their engagement on Saturday, 21 November 2026 at Manasi Hotel, Chhatrapati Sambhajinagar, Aurangabad, Maharashtra.",
+  description: "Together with their families, Saumya and Karan invite you to celebrate their engagement on Saturday, 21 November 2026, 6:00 PM onwards at Manasi Hotel, Chhatrapati Sambhajinagar, Aurangabad, Maharashtra.",
   openGraph: {
     title: "Saumya & Karan — Engagement Invitation",
-    description: "You're invited! Saturday, 21 November 2026 at Manasi Hotel, Chhatrapati Sambhajinagar, Aurangabad, Maharashtra.",
+    description: "You're invited! Saturday, 21 November 2026, 6:00 PM onwards at Manasi Hotel, Chhatrapati Sambhajinagar, Aurangabad, Maharashtra.",
     siteName: "Saumya & Karan Engagement",
     images: [
       {
@@ -27,7 +27,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Saumya & Karan — Engagement Invitation",
-    description: "You're invited! Saturday, 21 November 2026 at Manasi Hotel.",
+    description: "You're invited! Saturday, 21 November 2026, 6:00 PM onwards at Manasi Hotel.",
     images: ["/invitation-assets/og-preview.png"]
   }
 };
